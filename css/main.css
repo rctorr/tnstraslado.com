@@ -85,7 +85,7 @@ hr.style14 {
       color: #e5e5e5;
       background-color: #0a6635;
 }
-#section3 .texto {
+#section3 .texto1 {
     padding: 50px 75px;
 }
 #section3 .texto2 {
@@ -463,6 +463,7 @@ footer p a:hover {
   .contact1-form {
     width: 100%;
   }
+    
     .reloj {
         margin: 10px 0;
     }
@@ -473,6 +474,18 @@ footer p a:hover {
     #section41 {
         padding: 30px 5% 50px;
         background-size: contain;
+    }
+    #section3 .texto1 {
+        padding: 50px 10px;
+    }
+    #section3 .texto2 {
+        padding: 30px 10px;
+    }
+    #section3 ul {
+        padding-right: 15px;
+    }
+    hr.style14 { 
+      width: 95%;
     }
 }
 
