@@ -120,12 +120,12 @@ hr.style14 {
 #section42 {
     color: #fff;
     background-color: #0a6635;
+    padding-top: 20px;
 }
 #section42 a {
     color: #fff;
     text-decoration: underline;
 }
-
 hr.style13 { 
   border: 0; 
   width: 80%;
@@ -135,15 +135,11 @@ hr.style13 {
   background-image: -ms-linear-gradient(left, #0a6635, #68b78d, #0a6635);
   background-image: -o-linear-gradient(left, #0a6635, #68b78d, #0a6635); 
 }
-
-#section42 p {
-    color: #b9b9b9;
+.mapa {
+    margin-top: 20px;
 }
 
-
-
 /*------FORMULARIO---------------------------------------*/
-
 a:focus {
 	outline: none !important;
 }
@@ -409,7 +405,15 @@ footer p a:hover {
     .embed-responsive-item {
         width: 90%;
     }  
-    
+    #section42 {
+        padding-top: 50px;
+    }    
+    .mapa {
+        margin-top: 10px;
+    }
+    .mapa-form {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -445,7 +449,7 @@ footer p a:hover {
 
 @media (max-width: 992px) {
   .container-contact1 {
-    padding: 90px 80px 88px 90px;
+    padding: 40px 40px 30px 40px;
   }
 
   .contact1-pic {
@@ -465,11 +469,20 @@ footer p a:hover {
         padding: 30px 10% 50px;
         background-size: cover;
     }
+    #section42 {
+        padding-top: 30px;
+    }
+    .mapa {
+        margin-top: 40px;
+    }
+    .mapa-form {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 768px) {
   .container-contact1 {
-    padding: 90px 80px 88px 80px;
+    padding: 30px 15px 30px 15px;
   }
 
   .contact1-pic {
@@ -480,7 +493,8 @@ footer p a:hover {
     width: 100%;
   }
     #sectionrelojes {
-        padding: 15px 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .reloj {
         margin: 10px 0;
@@ -505,13 +519,18 @@ footer p a:hover {
     hr.style14 { 
       width: 95%;
     }
+    .mapa {
+        margin-top: 20px;
+    }
 }
 
+/*
 @media (max-width: 576px) {
   .container-contact1 {
     padding: 90px 15px 88px 15px;
   }
 }
+*/
 
 
 
