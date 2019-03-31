@@ -524,17 +524,6 @@ footer p a:hover {
     }
 }
 
-/*
-@media (max-width: 576px) {
-  .container-contact1 {
-    padding: 90px 15px 88px 15px;
-  }
-}
-*/
-
-
-
-
 
 
 /*------------------------------------------------------------------
@@ -545,7 +534,7 @@ footer p a:hover {
 }
 
 .alert-validate::before {
-  content: attr(data-validate);
+  content: attr(text-validate);
   position: absolute;
   max-width: 70%;
   background-color: white;
@@ -577,8 +566,8 @@ footer p a:hover {
 }
 
 .alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
+  content: "\26A0";
+  font-weight:900;
   display: block;
   position: absolute;
   color: #c80000;
@@ -598,7 +587,7 @@ footer p a:hover {
 }
 
 @media (max-width: 992px) {
-  .alert-validate::before {
+  .alert-validate:hover:before {
     visibility: visible;
     opacity: 1;
   }
