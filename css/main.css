@@ -427,6 +427,22 @@ footer p a:hover {
     
 }
 
+/* Media query especial para corregir ajuste de imágenes en section3 */
+@media (max-width: 1120px) {
+    #section3 .texto1 {
+        padding: 30px 10px;
+    }
+    #section3 .texto2 {
+        padding: 30px 10px;
+    }
+    #section3 ul {
+        padding-right: 0px;
+    }
+    hr.style14 { 
+      width: 90%;
+    }
+}
+
 @media (max-width: 992px) {
   .container-contact1 {
     padding: 90px 80px 88px 90px;
@@ -476,10 +492,10 @@ footer p a:hover {
         background-size: contain;
     }
     #section3 .texto1 {
-        padding: 50px 10px;
+        padding: 20px 10px;
     }
     #section3 .texto2 {
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
     #section3 ul {
         padding-right: 15px;
