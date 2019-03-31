@@ -198,9 +198,9 @@
         <div class="contact1">
 		<div class="container-contact1">
 			
-			<form class="contact1-form validate-form center-block">
+			<form class="contact1-form validate-form center-block" onsubmit="form_post(); return false">
 				<div class="wrap-input1 validate-input">
-					<input class="input1" type="text" name="name" placeholder="Nombre" required>
+					<input class="input1" type="text" name="nombre" placeholder="Nombre" required>
                     <span class="alert-validate" text-validate="Nombre es requerido"></span>
 					<span class="shadow-input1"></span>
 				</div>
@@ -212,13 +212,16 @@
 				</div>
         
 
-				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<textarea class="input1" name="message" placeholder="Mensaje"></textarea>
+				<div class="wrap-input1 validate-input">
+					<textarea class="input1" name="mensaje" placeholder="Mensaje" required></textarea>
+                    <span class="alert-validate" text-validate="Mensaje es requerido"></span>
 					<span class="shadow-input1"></span>
 				</div>
-
+                
+                <div class="alert alert-info" role="alert" id="status">ESCRÍBENOS</div>
+                
 				<div class="container-contact1-form-btn">
-					<button type="submit" class="contact1-form-btn">
+					<button class="contact1-form-btn">
 						<span>
 							Enviar Email
 							<i class="glyphicon glyphicon-send" aria-hidden="true"></i>
@@ -226,7 +229,38 @@
 					</button>
 				</div>
 			</form>
-		</div>
+            <script>
+                function form_post(){
+                    // Create our XMLHttpRequest object
+                    var request = new XMLHttpRequest();
+                    // Create some variables we need to send to our PHP file
+                    var url = "formsend.php";
+                    var nombre = document.getElementsByName("nombre")[0].value;
+                    var email = document.getElementsByName("email")[0].value;
+                    var msg = document.getElementsByName("mensaje")[0].value;
+                    var vars = "nombre="+nombre+"&email="+email+"&mensaje="+msg;
+                    
+                    request.open("POST", url, true);
+                    // Set content type header information for sending url encoded variables in the request
+                    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    // Access the onreadystatechange event for the XMLHttpRequest object
+                    request.onreadystatechange = function() {
+                        if(request.readyState == 4 && request.status == 200) {
+                            var data = JSON.parse(request.responseText);
+                            if(data == true) {
+                                document.getElementById("status").innerHTML = "¡Mensaje enviado con éxito!";
+                            }
+                            else {
+                                document.getElementById("status").innerHTML = data;
+                            }
+                        }
+                    }
+                    // Send the data to PHP now... and wait for response to update the status div
+                    request.send(vars);
+                    document.getElementById("status").innerHTML = "Processando envío...";
+                }
+            </script>
+            </div>
 	   </div>
     </div>
   </div>
