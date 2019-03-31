@@ -479,7 +479,9 @@ footer p a:hover {
   .contact1-form {
     width: 100%;
   }
-    
+    #sectionrelojes {
+        padding: 15px 0px;
+    }
     .reloj {
         margin: 10px 0;
     }
