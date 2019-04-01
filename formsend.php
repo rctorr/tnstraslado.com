@@ -35,7 +35,7 @@
       if(strlen($error_message) > 0) {
         died($error_message);
       }
-        $email_message = "El detalle de mensajea continuación.\r\n";
+        $email_message = "El detalle de mensaje a continuación.\r\n\r\n";
 
         function clean_string($string) {
           $bad = array("content-type","bcc:","to:","cc:");
@@ -47,8 +47,8 @@
         $email_message .= "Message: \r\n".clean_string($msg)."\r\n\r\n";
         $email_message .= base64_decode($base)."\r\n";
 
-        $headers = 'From: '.$email."\r\n".
-        'Reply-To: '.$email."\r\n" .
+        $headers = 'From: '.base64_decode($email_to)."\r\n".
+        'Reply-To: '.base64_decode($email_to)."\r\n" .
         'X-Mailer: PHP/' . phpversion();
         mail(base64_decode($email_to), $email_subject, $email_message, $headers);
 
